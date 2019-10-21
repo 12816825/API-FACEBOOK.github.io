@@ -9,7 +9,9 @@
                 xfbml      : true,
                 version    : 'v4.0'
               });
-              FB.AppEvents.logPageView();
+            FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
             };
           
             (function(d, s, id){
@@ -20,11 +22,6 @@
                fjs.parentNode.insertBefore(js, fjs);
              }(document, 'script', 'facebook-jssdk'));
           </script>
-          /*<div
-          class="fb-like"
-          data-share="true"
-          data-width="450"
-          data-show-faces="true">
-        </div>*/
+         
 </head>
 </html>
