@@ -9,8 +9,12 @@
                 xfbml      : true,
                 version    : 'v4.0'
               });
-            FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
+            FB.getLoginStatus(function(response) { 
+                 function statusChangeCallback(response){
+            if(response.status === 'connected'){
+            console.log('logged in and authenticated');}
+            else { console.log('not authenticated');}
+    
 });
             };
           
@@ -24,7 +28,7 @@
             function statusChangeCallback(response){
             if(response.status === 'connected'){
             console.log('logged in and authenticated');}
-            else { console.log('not authenticated');}}
+            else { console.log('not authenticated');
           </script>
          
 </head>
