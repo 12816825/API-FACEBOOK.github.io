@@ -21,6 +21,10 @@
                js.src = "https://connect.facebook.net/en_US/sdk.js";
                fjs.parentNode.insertBefore(js, fjs);
              }(document, 'script', 'facebook-jssdk'));
+            function statusChangeCallback(response){
+            if(response.status === 'connected'){
+            console.log('logged in and authenticated');}
+            else { console.log('not authenticated');}}
           </script>
          
 </head>
